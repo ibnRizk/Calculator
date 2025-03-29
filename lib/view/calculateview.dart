@@ -20,17 +20,6 @@ class CalculateView extends StatelessWidget {
           ),
           backgroundColor: Colors.black,
         ),
-        body: Column(
-          mainAxisAlignment: MainAxisAlignment.end,
-          children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.end,
-              children: [
-                Text('0', style: TextStyle(color: Colors.white, fontSize: 100)),
-              ],
-            ),
-          ],
-        ),
       ),
     );
   }
