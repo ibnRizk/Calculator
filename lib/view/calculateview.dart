@@ -1,7 +1,24 @@
 import 'package:flutter/material.dart';
 
-class CalculateView extends StatelessWidget {
+class CalculateView extends StatefulWidget {
   const CalculateView({super.key});
+
+  @override
+  State<CalculateView> createState() => _CalculateViewState();
+}
+
+class _CalculateViewState extends State<CalculateView> {
+  Widget calculatebutton(String text, Color txtColor, Color btnColor) {
+    return ElevatedButton(
+      onPressed: () {},
+      style: ElevatedButton.styleFrom(
+        backgroundColor: btnColor,
+        padding: EdgeInsets.all(20),
+        shape: CircleBorder(),
+      ),
+      child: Text(text, style: TextStyle(fontSize: 32, color: txtColor)),
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -20,16 +37,23 @@ class CalculateView extends StatelessWidget {
           ),
           backgroundColor: Colors.black,
         ),
-        body: Column(
-          mainAxisAlignment: MainAxisAlignment.end,
-          children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.end,
-              children: [
-                Text('0', style: TextStyle(color: Colors.white, fontSize: 100)),
-              ],
-            ),
-          ],
+        body: Padding(
+          padding: const EdgeInsets.all(16),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.end,
+            children: [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  Text(
+                    '0',
+                    style: TextStyle(color: Colors.white, fontSize: 100),
+                  ),
+                ],
+              ),
+              SizedBox(height: 8),
+            ],
+          ),
         ),
       ),
     );
