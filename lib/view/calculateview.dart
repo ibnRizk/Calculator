@@ -12,6 +12,8 @@ class _CalculateViewState extends State<CalculateView> {
     return ElevatedButton(
       onPressed: () {},
       style: ElevatedButton.styleFrom(
+        fixedSize: Size(MediaQuery.of(context).size.width / 4 - 8, 75),
+        // fixedSize: Size(65, MediaQuery.of(context).size.width / 4),
         backgroundColor: btnColor,
         padding: EdgeInsets.all(20),
         shape: CircleBorder(),
@@ -38,7 +40,7 @@ class _CalculateViewState extends State<CalculateView> {
           backgroundColor: Colors.black,
         ),
         body: Padding(
-          padding: const EdgeInsets.all(16),
+          padding: const EdgeInsets.all(12),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
@@ -95,21 +97,24 @@ class _CalculateViewState extends State<CalculateView> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  ElevatedButton(
-                    onPressed: () {},
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.grey,
-                      shape: StadiumBorder(),
-                      padding: EdgeInsets.only(
-                        left: 36,
-                        top: 12,
-                        bottom: 12,
-                        right: 92,
+                  Padding(
+                    padding: const EdgeInsets.only(right: 7, left: 7),
+                    child: ElevatedButton(
+                      onPressed: () {},
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.grey,
+                        shape: StadiumBorder(),
+                        padding: EdgeInsets.only(
+                          left: 36,
+                          top: 12,
+                          bottom: 12,
+                          right: 110,
+                        ),
                       ),
-                    ),
-                    child: Text(
-                      '0',
-                      style: TextStyle(color: Colors.black, fontSize: 36),
+                      child: Text(
+                        '0',
+                        style: TextStyle(color: Colors.black, fontSize: 36),
+                      ),
                     ),
                   ),
                   calculatebutton('.', Colors.black, Colors.grey),
